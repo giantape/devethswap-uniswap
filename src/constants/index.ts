@@ -17,12 +17,13 @@ export const COMP = new Token(ChainId.DTH, '0xc00e94Cb662C3520282E6f5717214004A7
 export const MKR = new Token(ChainId.DTH, '0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2', 18, 'MKR', 'Maker')
 export const AMPL = new Token(ChainId.DTH, '0xD46bA6D942050d489DBd938a2C909A5d5039A161', 9, 'AMPL', 'Ampleforth')
 export const WBTC = new Token(ChainId.DTH, '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599', 8, 'WBTC', 'Wrapped BTC')
+
 export const HONEY = new Token(
-  ChainId.DTH,
-  '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
-  18,
-  'WETH',
-  'Wrapped Ether'
+    ChainId.DTH,
+    '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+    18,
+    'WETH',
+    'Wrapped Ether'
 )
 export const WETH_TOKEN = new Token(
   ChainId.DTH,
@@ -48,7 +49,6 @@ const WETH_ONLY: ChainTokenList = {
   [ChainId.DTH]: [WETH[ChainId.DTH]]
 }
 
-console.log('WETH_ONLy >>>', [...WETH_ONLY[ChainId.DTH], WETH_TOKEN, DAI, USDC, USDT, WBTC])
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,

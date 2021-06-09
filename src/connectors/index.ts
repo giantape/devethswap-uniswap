@@ -31,7 +31,7 @@ export const injected = new InjectedConnector({
 })
 
 export const walletconnect = new WalletConnectConnector({
-  rpc: { 787: 'https://xdai.1hive.org' },
+  rpc: { 787: 'https://rpc.deveth.org/' },
   bridge: 'https://bridge.walletconnect.org',
   qrcode: true,
   pollingInterval: 15000
@@ -45,13 +45,13 @@ export const fortmatic = new FortmaticConnector({
 
 export const portis = new PortisConnector({
   dAppId: PORTIS_ID ?? '',
-  networks: [100]
+  networks: [1]
 })
 
 // mainnet only
 export const walletlink = new WalletLinkConnector({
   url: NETWORK_URL,
-  appName: 'CheapSwap',
+  appName: 'deveth_swap',
   appLogoUrl:
     'https://mpng.pngfly.com/20181202/bex/kisspng-emoji-domain-unicorn-pin-badges-sticker-unicorn-tumblr-emoji-unicorn-iphoneemoji-5c046729264a77.5671679315437924251569.jpg'
 })

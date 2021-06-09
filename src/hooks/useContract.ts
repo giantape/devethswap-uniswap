@@ -46,18 +46,13 @@ export function useTokenContract(tokenAddress?: string, withSignerIfPossible?: b
   return useContract(tokenAddress, ERC20_ABI, withSignerIfPossible)
 }
 
-
 export function useWETHContract(withSignerIfPossible?: boolean): Contract | null {
   const { chainId } = useActiveWeb3React()
-  console.log('WETH[chainId].address  >>>', WETH)
-  //const token = chainId ? WETH[chainId].address : WETH[787].address;
-  //console.log('token >>>', token)
   return useContract(chainId ? WETH[chainId].address : undefined, WETH_ABI, withSignerIfPossible)
 }
 
 export function useENSRegistrarContract(withSignerIfPossible?: boolean): Contract | null {
   const { chainId } = useActiveWeb3React()
-  console.log('chainID >>>', chainId)
   let address: string | undefined
   if (chainId) {
     switch (chainId) {

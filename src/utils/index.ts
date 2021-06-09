@@ -23,13 +23,13 @@ const ETHERSCAN_PREFIXES: { [chainId in ChainId]: string } = {
   4: 'rinkeby.',
   5: 'goerli.',
   42: 'kovan.',
-  787: 'dth.'
+  787: 'xdai.'
 }
 
 export function getEtherscanLink(chainId: ChainId, data: string, type: 'transaction' | 'token' | 'address'): string {
   let prefix
   if (chainId === 787) {
-    prefix = 'https://explore.deveth.org/'
+    prefix = 'https://explore.deveth.org'
   } else {
     prefix = `https://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[1]}etherscan.io`
   }

@@ -12,11 +12,17 @@ export interface TagInfo extends TagDetails {
 /**
  * Token instances created from token info.
  */
-export class WrappedTokenInfo extends Token {
+ export class WrappedTokenInfo extends Token {
   public readonly tokenInfo: TokenInfo
   public readonly tags: TagInfo[]
   constructor(tokenInfo: TokenInfo, tags: TagInfo[]) {
-    super(tokenInfo.chainId, tokenInfo.address, tokenInfo.decimals, tokenInfo.symbol, tokenInfo.name)
+    let chainId
+    if (tokenInfo.chainId === 1) {
+      chainId = 787
+    } else {
+      chainId = tokenInfo.chainId
+    }
+    super(chainId, tokenInfo.address, tokenInfo.decimals, tokenInfo.symbol, tokenInfo.name)
     this.tokenInfo = tokenInfo
     this.tags = tags
   }

@@ -30,8 +30,18 @@ function serializeToken(token: Token): SerializedToken {
 }
 
 function deserializeToken(serializedToken: SerializedToken): Token {
+  var chainId
+
+  if (serializedToken.chainId === 1) {
+    chainId = 787
+  } else {
+    chainId = serializedToken.chainId
+  }
+
+  console.log(serializedToken)
+
   return new Token(
-    serializedToken.chainId,
+    chainId,
     serializedToken.address,
     serializedToken.decimals,
     serializedToken.symbol,
