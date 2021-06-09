@@ -8,7 +8,7 @@ export const setupNetwork = async () => {
         params: [
           {
             chainId: chainId,
-            chainName: 'dth',
+            chainName: 'devEth',
             nativeCurrency: {
               name: 'dth',
               symbol: 'dth',

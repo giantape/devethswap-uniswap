@@ -119,8 +119,6 @@ export function useCurrencyBalances(
 }
 
 export function useCurrencyBalance(account?: string, currency?: Currency): CurrencyAmount | undefined {
-  console.log('account >>', account)
-  console.log('currency >>', currency)
   return useCurrencyBalances(account, [currency])[0]
 }
 

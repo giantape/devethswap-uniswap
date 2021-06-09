@@ -50,16 +50,13 @@ const Input = styled.input<{ error?: boolean }>`
   }
   padding: 0px;
   -webkit-appearance: textfield;
-
   ::-webkit-search-decoration {
     -webkit-appearance: none;
   }
-
   ::-webkit-outer-spin-button,
   ::-webkit-inner-spin-button {
     -webkit-appearance: none;
   }
-
   ::placeholder {
     color: ${({ theme }) => theme.text4};
   }
@@ -103,7 +100,7 @@ export default function AddressInputPanel({
               </TYPE.black>
               {address && chainId && (
                 <ExternalLink href={getEtherscanLink(chainId, name ?? address, 'address')} style={{ fontSize: '14px' }}>
-                  (View on devETH Explorer)
+                  (View on explorer)
                 </ExternalLink>
               )}
             </RowBetween>

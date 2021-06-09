@@ -137,6 +137,8 @@ export default function Header() {
   const { account, chainId } = useActiveWeb3React()
 
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
+  console.log('account >>', account)
+  console.log('userEthBalance >>', userEthBalance)
   const [isDark] = useDarkModeManager()
 
   return (
@@ -148,7 +150,7 @@ export default function Header() {
               <img style={{width: '40px', marginRight: '15px'}} src={isDark ? LogoDark : Logo} alt="logo" />
             </UniIcon>
             <TitleText>
-              <span style={{color: '#fff', fontStyle: 'normal'}}>devEThereum</span>
+              <span style={{color: '#fff', textDecoration: 'none'}}>devEthereum</span>
             </TitleText>
           </Title>
         </HeaderElement>
