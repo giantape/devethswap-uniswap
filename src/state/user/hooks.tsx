@@ -38,7 +38,7 @@ function deserializeToken(serializedToken: SerializedToken): Token {
     chainId = serializedToken.chainId
   }
 
-  console.log(serializedToken)
+  // console.log(serializedToken)
 
   return new Token(
     chainId,

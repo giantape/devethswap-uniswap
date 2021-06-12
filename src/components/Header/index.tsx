@@ -137,8 +137,8 @@ export default function Header() {
   const { account, chainId } = useActiveWeb3React()
 
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
-  console.log('account >>', account)
-  console.log('userEthBalance >>', userEthBalance)
+  // console.log('account >>', account)
+  // console.log('userEthBalance >>', userEthBalance)
   const [isDark] = useDarkModeManager()
 
   return (

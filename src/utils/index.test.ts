@@ -9,7 +9,7 @@ import {
   shortenAddress,
   calculateGasMargin,
   basisPointsToPercent
-} from '.'
+} from '../utils./utils'
 
 describe('utils', () => {
   describe('#getEtherscanLink', () => {
