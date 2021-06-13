@@ -36,6 +36,6 @@
     "cypress"
   ],
   "include": [
-    "src"
+    "xxxsrc"
   ]
 }
