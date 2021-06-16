@@ -205,14 +205,16 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  
 }
 `
 
 export const ThemedGlobalStyle = createGlobalStyle`
 html {
-  color: ${({ theme }) => theme.text1};
-  background-color: ${({ theme }) => theme.grd1};
-  background: linear-gradient(111.63deg, ${({ theme }) => theme.grd1} 0%, ${({ theme }) => theme.grd2} 49.48%, ${({
+  background: #159957;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: ${({ theme }) => theme.text1}; ${({
   theme
 }) => theme.grd3} 100%);
 }

@@ -10,29 +10,15 @@ type ChainTokenList = {
   readonly [chainId in ChainId]: Token[]
 }
 
-export const USDC = new Token(ChainId.DTH, '0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83', 6, 'USDC', 'USDC on xDai')
-export const HONEY = new Token(ChainId.DTH, '0x71850b7e9ee3f13ab46d67167341e4bdc905eef9', 18, 'HNY', 'Honey')
-export const XDAI_WETH = new Token(
-  ChainId.DTH,
-  '0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1',
-  18,
-  'WETH',
-  'Wrapped Ether on xDai'
-)
-export const STAKE = new Token(
-  ChainId.DTH,
-  '0xb7D311E2Eb55F2f68a9440da38e7989210b9A05e',
-  18,
-  'STAKE',
-  'Stake Token on xDai'
-)
-export const AGAVE = new Token(
-  ChainId.DTH,
-  '0x3a97704a1b25F08aa230ae53B352e2e72ef52843',
-  18,
-  'AGVE',
-  'Agave Token'
-)
+export const USDC = new Token(ChainId.DTH, '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', 6, 'USDC', 'USDC on DTH')
+export const USDT = new Token(ChainId.DTH, '0xdAC17F958D2ee523a2206206994597C13D831ec7', 6, 'USDT', 'USDT on DTH')
+export const DAI= new Token(ChainId.DTH, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18, 'DAI', 'DAI Stable Coin', 'hallo')
+export const BAT = new Token(ChainId.DTH, '0x0D8775F648430679A709E98d2b0Cb6250d2887EF', 18, 'BAT', 'BAT')
+export const WBTC = new Token(ChainId.DTH, '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599', 8,'WBTC','WBTC')
+export const MKR = new Token(ChainId.DTH, '0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2', 18,'MKR','MKR')
+export const LINK = new Token(ChainId.DTH, '0x514910771AF9Ca656af840dff83E8264EcF986CA', 18,'LINK','LINK')
+export const AMPL = new Token(ChainId.DTH, '0xD46bA6D942050d489DBd938a2C909A5d5039A161', 18,'AMPL','AMPL')
+export const SOCKS = new Token(ChainId.DTH, '0x23B608675a2B2fB1890d3ABBd85c5775c51691d5', 18,'SOCKS','SOCKS')
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
@@ -46,7 +32,7 @@ const WETH_ONLY: ChainTokenList = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.DTH]: [...WETH_ONLY[ChainId.DTH], XDAI_WETH, HONEY, STAKE, AGAVE]
+  [ChainId.DTH]: [...WETH_ONLY[ChainId.DTH], DAI, BAT, USDC, USDT, WBTC, MKR, LINK, AMPL, SOCKS]
 }
 
 /**
@@ -58,13 +44,13 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.DTH]: [...WETH_ONLY[ChainId.DTH], XDAI_WETH, HONEY, STAKE, AGAVE]
+  [ChainId.DTH]: [...WETH_ONLY[ChainId.DTH], DAI, BAT, USDC, USDT, WBTC, MKR, LINK, AMPL, SOCKS]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.DTH]: [...WETH_ONLY[ChainId.DTH], XDAI_WETH, HONEY, STAKE, AGAVE]
+  [ChainId.DTH]: [...WETH_ONLY[ChainId.DTH], DAI, BAT, USDC, USDT, WBTC, MKR, LINK, AMPL, SOCKS]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {}
