@@ -23,7 +23,7 @@ const ETHERSCAN_PREFIXES: { [chainId in ChainId]: string } = {
   4: 'rinkeby.',
   5: 'goerli.',
   42: 'kovan.',
-  787: 'xdai.'
+  787: 'dTH.'
 }
 
 export function getEtherscanLink(chainId: ChainId, data: string, type: 'transaction' | 'token' | 'address'): string {

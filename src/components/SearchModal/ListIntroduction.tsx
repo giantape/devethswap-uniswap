@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text } from 'rebass'
-import { ExternalLink } from '../../theme'
+// import { ExternalLink } from '../../theme'
 import { ButtonPrimary } from '../Button'
 import { OutlineCard } from '../Card'
 import Column, { AutoColumn } from '../Column'
@@ -28,7 +28,7 @@ export default function ListIntroduction({ onSelectList }: { onSelectList: () =>
             alt="token-list-preview"
           />
           <Text style={{ marginBottom: '8px', textAlign: 'center' }}>
-            Honeyswap now supports token lists. You can add your own custom lists via IPFS, HTTPS and ENS.{' '}
+            DevEthereum-swap now supports token lists. You can add your own custom lists via IPFS, HTTPS and ENS.{' '}
           </Text>
           <ButtonPrimary onClick={onSelectList} id="list-introduction-choose-a-list">
             Choose a list
@@ -36,8 +36,8 @@ export default function ListIntroduction({ onSelectList }: { onSelectList: () =>
           <OutlineCard style={{ marginBottom: '8px', padding: '1rem' }}>
             <Text fontWeight={400} fontSize={14} style={{ textAlign: 'center' }}>
               Token lists are an{' '}
-              <ExternalLink href="https://github.com/1Hive/token-lists">open specification</ExternalLink>. Check out{' '}
-              <ExternalLink href="https://tokenlists.1hive.org">tokenlists.1hive.org</ExternalLink> to learn more.
+              {/* <ExternalLink href="https://github.com/1Hive/token-lists">open specification</ExternalLink>. Check out{' '}
+              <ExternalLink href="https://tokenlists.1hive.org">tokenlists.1hive.org</ExternalLink> to learn more. */}
             </Text>
           </OutlineCard>
         </AutoColumn>
