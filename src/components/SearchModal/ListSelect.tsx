@@ -341,7 +341,7 @@ export function ListSelect({ onDismiss, onBack }: { onDismiss: () => void; onBac
       <Separator />
 
       <div style={{ padding: '16px', textAlign: 'center' }}>
-        <ExternalLink href="https://tokenlists.1hive.org">Browse lists</ExternalLink>
+        <ExternalLink href="https://devethswap.de/default.tokenlist.json">Browse lists</ExternalLink>
       </div>
     </Column>
   )
