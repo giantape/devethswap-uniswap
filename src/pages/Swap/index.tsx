@@ -260,7 +260,6 @@ export default function Swap() {
   }, [])
 
   const tokenOutputSelected = tokenList.tokens.find(t => t.symbol === currencies[Field.OUTPUT]?.symbol)
-
   return (
     <>
       <TokenWarningModal

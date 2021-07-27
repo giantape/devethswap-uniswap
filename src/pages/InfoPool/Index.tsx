@@ -21,7 +21,7 @@ import { toV2LiquidityToken, useTrackedTokenPairs } from '../../state/user/hooks
 import AppBody from '../AppBody'
 import { Dots } from '../../components/swap/styleds'
 
-export default function Pool() {
+export default function InfoPool() {
   const theme = useContext(ThemeContext)
   const { account } = useActiveWeb3React()
 
@@ -54,8 +54,13 @@ export default function Pool() {
 
   const allV2PairsWithLiquidity = v2Pairs.map(([, pair]) => pair).filter((v2Pair): v2Pair is Pair => Boolean(v2Pair))
 
-  // console.log('allV2PairsWithLiquidity', allV2PairsWithLiquidity)
+  console.log('allV2PairsWithLiquidity', allV2PairsWithLiquidity)
   const hasV1Liquidity = useUserHasLiquidityInAllTokens()
+  allV2PairsWithLiquidity.map(v2pair => {
+    console.log('v2pair >>>', v2pair)
+  })
+  console.log('trackedTokenPairs', trackedTokenPairs)
+  console.log('liquidityTokensWithBalances', liquidityTokensWithBalances)
 
   return (
     <>
